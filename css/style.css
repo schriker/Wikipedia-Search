@@ -1,0 +1,114 @@
+body{
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    color: #898989;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    background-color: #0a2642;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+h2{
+    color: #454545;
+    font-size: 30px;
+}
+
+input[type="text"]{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+}
+
+.input-wrap{
+    position: absolute;
+    left: 50%;
+    top: 15%; /* 50% When no results */ 
+    width: 40%;
+    transform: translate(-50%,-50%);
+}
+
+.search-icon{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #c7c7c7;
+    font-size: 36px;
+    transition: color 0.2s ease;
+}
+
+.search-input{
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #c7c7c7;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 30px 20px 90px;
+    border-bottom: 4px solid #58ade7;
+    transition: border 0.2s ease;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.15);
+}
+
+.search-input:active,
+.search-input:focus{
+    color: #454545;
+    border-color: #e82c0c;
+}
+
+.search-input:focus + .search-icon{
+    color: #e82c0c;
+}
+
+.search-input::-webkit-input-placeholder{
+    color: #c7c7c7;
+}
+
+.results{
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%,0);
+}
+
+.results article{
+    background-color: #fff;
+    border-bottom: 1px solid #dedede;
+    box-sizing: border-box;
+    padding: 15px 45px;
+    text-align: justify;
+    position: relative;
+}
+
+.results article a{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.results article a:hover + h2{
+    color: #e82c0c;
+    transition: color 0.2s ease;
+}
+
+.results article a:hover ~ p{
+    color: #454545;
+    transition: color 0.2s ease;
+}
+
+.results article:last-of-type{
+    border: none;
+    -webkit-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.15);
+}
