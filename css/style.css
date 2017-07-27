@@ -11,7 +11,7 @@ body{
     font-weight: 400;
     line-height: 28px;
     background-color: #0a2642;
-    background-image: url(../img/bg.jpg);
+    background-image: url(https://image.ibb.co/hnueAQ/bg.jpg);
     background-repeat: no-repeat;
     background-position-x: center;
     -webkit-background-size: cover;
@@ -93,7 +93,6 @@ input[type="text"]{
     clear: both;
     float: left;
     width: 100%;
-    margin: 0 0 100px 0;
 }
 
 .results{
@@ -138,6 +137,7 @@ input[type="text"]{
 
 .results article:last-of-type{
     border: none;
+    margin: 0 0 100px 0;
     -webkit-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.15);
     box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.15);

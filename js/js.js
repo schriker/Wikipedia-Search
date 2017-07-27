@@ -1,7 +1,3 @@
-$(document).ready(function(){
-    $(".result-wrapper").hide();
-});
-
 function wikiSearch(inputValue){
         $.ajax({
         url: "https://en.wikipedia.org/w/api.php?callback=?",
@@ -26,25 +22,21 @@ function wikiSearch(inputValue){
         },
         success: function(result){
             $(".search-wrap").removeClass("height-100");
-            $(".result-wrapper").show();
-            $(".results").empty();
-            if(result.query == undefined){
-                $(".results").append("<article><p>Nothing Found :(</p></article>");
-            }
-            else 
-                {
+            if(result.query !== undefined){
+                                    $(".results").empty();
                     result.query.pages.forEach(function(x){
                         $(".results").append("<article><a target=\"_blank\" href=\""+x.fullurl+"\"></a><h2>"+x.title+"</h2><p>"+x.extract+"</p></article>");
                     });
-                }
+            }
+
         }
     });
 }
 
 $(".search-input").keyup(function(){
     if(!$(".search-input").val()){
+        $(".results").empty();
         $(".search-wrap").addClass("height-100");
-        $(".result-wrapper").hide();
     }
     else{
         wikiSearch($(".search-input").val());
